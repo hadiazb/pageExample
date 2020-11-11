@@ -6,19 +6,22 @@ import {
 	UnauthenticatedRoute,
 } from './AuthRoutes';
 import NotFound from '../Containers/NotFound';
-import ROUTES from './routes';
 
-const routes = ROUTES.map((route) => {
-	if (route.path instanceof Array) {
-		return route.path.map((path) => ({
-			...route,
-			path,
-		}));
-	}
-	return route;
-}).flat();
+import { connect } from 'react-redux';
 
-const Router = () => {
+const Router = (props) => {
+	const { routesReducer } = props;
+	const ROUTES = routesReducer.routes;
+	const routes = ROUTES.map((route) => {
+		if (route.path instanceof Array) {
+			return route.path.map((path) => ({
+				...route,
+				path,
+			}));
+		}
+		return route;
+	}).flat();
+
 	return (
 		<Switch>
 			{routes.map(
@@ -42,4 +45,14 @@ const Router = () => {
 	);
 };
 
-export default Router;
+const mapStateToProps = (reducers) => {
+	const { routesReducer } = reducers;
+	return { routesReducer };
+};
+
+const mapDispatchToProps = {};
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Router);

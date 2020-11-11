@@ -1,8 +1,12 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../Styles/Containers/Layout.css';
+import { connect } from 'react-redux';
+import NavHeader from '../Components/NavHeader';
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+	const { children, routesReducer } = props;
+	console.log(routesReducer);
 	return (
 		<>
 			<header className='header'>
@@ -13,20 +17,7 @@ const Layout = ({ children }) => {
 						className='header__img'
 					/>
 				</Link>
-				<nav className='header__nav'>
-					<ul className='list'>
-						<li className='list__item'>
-							<NavLink to='/login' activeClassName='select'>
-								<h4 className='list__item-text'>Login</h4>
-							</NavLink>
-						</li>
-						<li className='list__item'>
-							<NavLink to='/register' activeClassName='select'>
-								<h4 className='list__item-text'>Register</h4>
-							</NavLink>
-						</li>
-					</ul>
-				</nav>
+				<NavHeader logged={routesReducer.user} />
 			</header>
 			{children}
 			<footer className='footer'>
@@ -59,4 +50,14 @@ const Layout = ({ children }) => {
 	);
 };
 
-export default Layout;
+const mapStateToProps = (reducers) => {
+	const { routesReducer } = reducers;
+	return { routesReducer };
+};
+
+const mapDispatchToProps = {};
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Layout);

@@ -13,7 +13,7 @@
 }
 
 .header__nav {
-	width: 200px;
+	/* width: 350px; */
 	height: 40px;
 }
 
@@ -22,14 +22,13 @@
 	height: 100%;
 	list-style: none;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
 }
 
 .header__nav .list .list__item {
-	width: 90px;
+	padding: 0 0 0 20px;
 	height: 30px;
-	text-align: right;
 	line-height: 30px;
 }
 

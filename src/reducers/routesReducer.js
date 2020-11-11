@@ -3,10 +3,11 @@ import {
 	ERROR,
 	GET_ROUTES,
 } from '../types/routesTypes';
+import ROUTES from '../Routes/routes';
 
 const INITIAL_STATE = {
-	user: [],
-	routes: [],
+	logged: false,
+	routes: ROUTES,
 	loading: false,
 	error: '',
 };
@@ -17,7 +18,7 @@ export default (state = INITIAL_STATE, action) => {
 		case GET_ROUTES:
 			return {
 				...state,
-				user: [],
+				logged: true,
 				routes: [],
 				loading: false,
 				error: '',
