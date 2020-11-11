@@ -1,0 +1,4 @@
+.no-auth {
+	height: calc(100vh - 90px);
+	padding: 0 30px;
+}

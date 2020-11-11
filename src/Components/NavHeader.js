@@ -9,13 +9,8 @@ const NavHeader = (props) => {
 				<nav className='header__nav'>
 					<ul className='list'>
 						<li className='list__item'>
-							<NavLink to='/report' activeClassName='select'>
-								<h4 className='list__item-text'>Report</h4>
-							</NavLink>
-						</li>
-						<li className='list__item'>
-							<NavLink to='/result' activeClassName='select'>
-								<h4 className='list__item-text'>Result</h4>
+							<NavLink to='/home' activeClassName='select'>
+								<h4 className='list__item-text'>Home</h4>
 							</NavLink>
 						</li>
 						<li className='list__item'>
@@ -33,6 +28,11 @@ const NavHeader = (props) => {
 			) : (
 				<nav className='header__nav'>
 					<ul className='list'>
+						<li className='list__item'>
+							<NavLink to='/home' activeClassName='select'>
+								<h4 className='list__item-text'>Home</h4>
+							</NavLink>
+						</li>
 						<li className='list__item'>
 							<NavLink to='/report' activeClassName='select'>
 								<h4 className='list__item-text'>Report</h4>

@@ -6,7 +6,8 @@ import {
 import ROUTES from '../Routes/routes';
 
 const INITIAL_STATE = {
-	logged: false,
+	logged: true,
+	authorized: true,
 	routes: ROUTES,
 	loading: false,
 	error: '',

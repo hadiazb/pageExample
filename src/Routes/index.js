@@ -1,10 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import {
-	AuthenticatedRoute,
-	UnauthenticatedRoute,
-} from './AuthRoutes';
+import AuthenticatedRoute from './AuthenticatedRoute';
+import UnauthenticatedRoute from './UnauthenticatedRoute';
+
 import NotFound from '../Containers/NotFound';
 
 import { connect } from 'react-redux';

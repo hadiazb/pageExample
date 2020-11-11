@@ -6,7 +6,6 @@ import NavHeader from '../Components/NavHeader';
 
 const Layout = (props) => {
 	const { children, routesReducer } = props;
-	console.log(routesReducer);
 	return (
 		<>
 			<header className='header'>
@@ -17,7 +16,7 @@ const Layout = (props) => {
 						className='header__img'
 					/>
 				</Link>
-				<NavHeader logged={routesReducer.user} />
+				<NavHeader logged={routesReducer.logged} />
 			</header>
 			{children}
 			<footer className='footer'>
