@@ -1,26 +1,24 @@
 import {
 	LOADING,
 	ERROR,
-	GET_ROUTES,
-} from '../types/routesTypes';
+	GET_SESION,
+} from '../types/sesionTypes';
 import ROUTES from '../Routes/routes';
 
 const INITIAL_STATE = {
-	logged: true,
+	logged: false,
 	authorized: false,
 	routes: ROUTES,
-	loading: false,
-	error: '',
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case GET_ROUTES:
+		case GET_SESION:
 			return {
 				...state,
-				logged: true,
-				routes: [],
+				logged: action.payload.logged,
+				authorized: action.payload.authorized,
 				loading: false,
 				error: '',
 			};

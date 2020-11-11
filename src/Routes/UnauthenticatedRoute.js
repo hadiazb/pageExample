@@ -7,11 +7,11 @@ const UnauthenticatedRoute = (props) => {
 		component: Component,
 		path,
 		exact,
-		routesReducer,
+		sesionReducer,
 	} = props;
 
-	const logged = routesReducer.logged;
-	const authorized = routesReducer.authorized;
+	const logged = sesionReducer.logged;
+	const authorized = sesionReducer.authorized;
 
 	if (logged && authorized) {
 		return (
@@ -30,8 +30,8 @@ const UnauthenticatedRoute = (props) => {
 */
 
 const mapStateToProps = (reducers) => {
-	const { routesReducer } = reducers;
-	return { routesReducer };
+	const { sesionReducer } = reducers;
+	return { sesionReducer };
 };
 
 const mapDispatchToProps = {};

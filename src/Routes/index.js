@@ -9,8 +9,8 @@ import NotFound from '../Containers/NotFound';
 import { connect } from 'react-redux';
 
 const Router = (props) => {
-	const { routesReducer } = props;
-	const ROUTES = routesReducer.routes;
+	const { sesionReducer } = props;
+	const ROUTES = sesionReducer.routes;
 	const routes = ROUTES.map((route) => {
 		if (route.path instanceof Array) {
 			return route.path.map((path) => ({
@@ -45,8 +45,8 @@ const Router = (props) => {
 };
 
 const mapStateToProps = (reducers) => {
-	const { routesReducer } = reducers;
-	return { routesReducer };
+	const { sesionReducer } = reducers;
+	return { sesionReducer };
 };
 
 const mapDispatchToProps = {};

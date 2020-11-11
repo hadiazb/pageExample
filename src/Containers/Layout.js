@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import NavHeader from '../Components/NavHeader';
 
 const Layout = (props) => {
-	const { children, routesReducer } = props;
+	const { children, sesionReducer } = props;
 	return (
 		<>
 			<header className='header'>
@@ -17,8 +17,8 @@ const Layout = (props) => {
 					/>
 				</Link>
 				<NavHeader
-					logged={routesReducer.logged}
-					authorized={routesReducer.authorized}
+					logged={sesionReducer.logged}
+					authorized={sesionReducer.authorized}
 				/>
 			</header>
 			{children}
@@ -53,8 +53,8 @@ const Layout = (props) => {
 };
 
 const mapStateToProps = (reducers) => {
-	const { routesReducer } = reducers;
-	return { routesReducer };
+	const { sesionReducer } = reducers;
+	return { sesionReducer };
 };
 
 const mapDispatchToProps = {};

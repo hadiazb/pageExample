@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import routesReducer from './routesReducer';
+import sesionReducer from './sesionReducer';
 
 export default combineReducers({
-	routesReducer,
+	sesionReducer,
 });

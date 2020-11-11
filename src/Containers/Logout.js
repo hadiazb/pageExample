@@ -1,8 +1,9 @@
 import React from 'react';
+import '../Styles/Containers/Logout.css';
 
 const Logout = () => {
 	return (
-		<div>
+		<div className='logout'>
 			<h4>Logout</h4>
 		</div>
 	);

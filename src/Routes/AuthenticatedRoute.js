@@ -7,17 +7,24 @@ const AuthenticatedRoute = (props) => {
 		component: Component,
 		path,
 		exact,
-		routesReducer,
+		sesionReducer,
 	} = props;
 
-	const logged = routesReducer.logged;
-	const authorized = routesReducer.authorized;
+	const logged = sesionReducer.logged;
+	const authorized = sesionReducer.authorized;
 
 	if (logged && authorized) {
 		return (
 			<Route component={Component} path={path} exact={exact} />
 		);
 	}
+
+	if (logged === true && authorized === false) {
+		return (
+			<Route component={Component} path={path} exact={exact} />
+		);
+	}
+
 	return <Redirect to='/no-auth' />;
 };
 
@@ -27,8 +34,8 @@ const AuthenticatedRoute = (props) => {
 */
 
 const mapStateToProps = (reducers) => {
-	const { routesReducer } = reducers;
-	return { routesReducer };
+	const { sesionReducer } = reducers;
+	return { sesionReducer };
 };
 
 const mapDispatchToProps = {};
