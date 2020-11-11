@@ -7,7 +7,7 @@ import ROUTES from '../Routes/routes';
 
 const INITIAL_STATE = {
 	logged: true,
-	authorized: true,
+	authorized: false,
 	routes: ROUTES,
 	loading: false,
 	error: '',

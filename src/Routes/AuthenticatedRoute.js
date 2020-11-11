@@ -10,7 +10,6 @@ const AuthenticatedRoute = (props) => {
 		routesReducer,
 	} = props;
 
-	console.log(routesReducer);
 	const logged = routesReducer.logged;
 	const authorized = routesReducer.authorized;
 

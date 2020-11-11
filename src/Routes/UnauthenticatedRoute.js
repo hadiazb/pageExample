@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const UnauthenticatedRoute = (props) => {
@@ -14,8 +14,11 @@ const UnauthenticatedRoute = (props) => {
 	const authorized = routesReducer.authorized;
 
 	if (logged && authorized) {
-		return <Redirect to='/dashboard' />;
+		return (
+			<Route component={Component} path={path} exact={exact} />
+		);
 	}
+
 	return (
 		<Route component={Component} path={path} exact={exact} />
 	);

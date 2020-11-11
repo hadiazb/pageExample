@@ -16,7 +16,10 @@ const Layout = (props) => {
 						className='header__img'
 					/>
 				</Link>
-				<NavHeader logged={routesReducer.logged} />
+				<NavHeader
+					logged={routesReducer.logged}
+					authorized={routesReducer.authorized}
+				/>
 			</header>
 			{children}
 			<footer className='footer'>
