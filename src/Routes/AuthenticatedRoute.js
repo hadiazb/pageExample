@@ -25,7 +25,7 @@ const AuthenticatedRoute = (props) => {
 		);
 	}
 
-	return <Redirect to='/no-auth' />;
+	return <Redirect to='/' />;
 };
 
 /*

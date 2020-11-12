@@ -2,6 +2,7 @@ import {
 	LOADING,
 	ERROR,
 	GET_SESION,
+	LEAVE_SESION,
 } from '../types/sesionTypes';
 import ROUTES from '../Routes/routes';
 
@@ -22,6 +23,16 @@ export default (state = INITIAL_STATE, action) => {
 				loading: false,
 				error: '',
 			};
+
+		case LEAVE_SESION:
+			return {
+				...state,
+				logged: action.payload.logged,
+				authorized: action.payload.authorized,
+				loading: false,
+				error: '',
+			};
+
 		case LOADING:
 			return { ...state, loading: true };
 

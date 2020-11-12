@@ -1,14 +1,25 @@
 import React from 'react';
 import '../Styles/Containers/Logout.css';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import {
+	getSesion,
+	leaveSesion,
+} from '../actions/sesionAction';
 
-const Logout = () => {
+const Logout = (props) => {
+	const { leaveSesion } = props;
 	const handleLogout = (event) => {
 		event.preventDefault();
+		leaveSesion();
 	};
+
 	return (
 		<div className='logout'>
 			<div className='logout__container'>
+				<div className='audio'></div>
+				<div className='camera'></div>
+				<div className='bottom'></div>
 				<div className='mark'>
 					<h2 className='logout__container-title'>Logout</h2>
 					<form
@@ -50,4 +61,14 @@ const Logout = () => {
 	);
 };
 
-export default Logout;
+const mapStateToProps = (reducers) => {
+	const { sesionReducer } = reducers;
+	return { sesionReducer };
+};
+
+const mapDispatchToProps = { getSesion, leaveSesion };
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Logout);

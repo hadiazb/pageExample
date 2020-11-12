@@ -3,7 +3,6 @@ import '../Styles/Containers/Home.css';
 import { connect } from 'react-redux';
 
 const Home = (props) => {
-	console.log(props.sesionReducer);
 	return (
 		<section className='home'>
 			<h1>This is the Home</h1>
