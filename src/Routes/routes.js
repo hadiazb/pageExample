@@ -3,6 +3,7 @@ import Login from '../Containers/Login';
 import Home from '../Containers/Home';
 import Result from '../Containers/Result';
 import Report from '../Containers/Report';
+import Profile from '../Containers/Profile';
 import Logout from '../Containers/Logout';
 import NoAuth from '../Containers/NoAuth';
 
@@ -46,7 +47,7 @@ const ROUTES = [
 		path: '/profile',
 		key: 'PROFILE',
 		exact: true,
-		component: Result,
+		component: Profile,
 		auth: true, // Private Route
 	},
 	{
