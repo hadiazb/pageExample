@@ -1,76 +1,21 @@
 import React from 'react';
+import FormProfile from '../Components/FormProfile';
 import '../Styles/Containers/Profile.css';
 
 const Profile = () => {
-	const handleUpdate = (event) => {
-		event.preventDefault();
-	};
-
 	return (
 		<div className='profile'>
 			<div className='profile__update'>
 				<h4 className='profile__update-title'>
 					Update Information
 				</h4>
-				<form
-					className='profile__update-form'
-					onSubmit={handleUpdate}
-				>
-					<input
-						className='input'
-						type='text'
-						placeholder='Name...'
-					/>
-					<input
-						className='input'
-						type='text'
-						placeholder='Username...'
-					/>
-					<input
-						className='input'
-						type='text'
-						placeholder='Email...'
-					/>
-					<input
-						className='input'
-						type='text'
-						placeholder='Phone...'
-					/>
-					<input
-						className='input'
-						type='text'
-						placeholder='Country...'
-					/>
-					<input
-						className='input'
-						type='text'
-						placeholder='State...'
-					/>
-					<input
-						className='input'
-						type='text'
-						placeholder='City...'
-					/>
-					<input
-						className='input'
-						type='text'
-						placeholder='Password...'
-					/>
-					<input
-						className='input'
-						type='text'
-						placeholder='New Password...'
-					/>
-					<label className='label' htmlFor='date'>
-						<span>Birthday</span>
-					</label>
-					<input className='input' type='date' name='date' />
-					<input
-						className='bottom'
-						type='submit'
-						value='Update'
-					/>
-				</form>
+				<FormProfile />
+			</div>
+			<div className='profile__card'>
+				<div
+					className='profile__card-header'
+					style={{ backgroundColor: '#000000' }}
+				></div>
 			</div>
 		</div>
 	);

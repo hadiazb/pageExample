@@ -35,8 +35,8 @@
 	padding-left: 15px;
 	outline: none;
 	border-radius: 3px;
-  border: none;
-  color: rgba(0, 0, 0, 0.5);
+	border: none;
+	color: rgba(0, 0, 0, 0.5);
 }
 
 .profile .profile__update .profile__update-form .bottom {
@@ -51,18 +51,38 @@
 	cursor: pointer;
 }
 
-.profile .profile__update .profile__update-form .label span{
+.profile
+	.profile__update
+	.profile__update-form
+	.label
+	span {
 	height: 30px;
 	width: 100%;
-  margin: 10px 0 5px;
-  color: #e7e0e9;
-  font-size: 12px;
+	margin: 10px 0 5px;
+	color: #e7e0e9;
+	font-size: 12px;
 }
 
 input[type='date'] {
 	color: rgba(0, 0, 0, 0.5);
 	font-size: 14px;
 	background: #ecf0f1;
-  padding: 0 10px;
-  cursor: pointer;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.profile .profile__card {
+	width: calc(100% - 320px);
+	margin: 0 0 0 20px;
+	border-radius: 5px;
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2),
+		0 2px 4px rgba(0, 0, 0, 0.2), 2px 0 4px rgba(0, 0, 0, 0.2),
+		-2px 0 4px rgba(0, 0, 0, 0.2);
+	background-color: #2b2f31;
+}
+
+.profile .profile__card .profile__card-header {
+  height: 200px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
