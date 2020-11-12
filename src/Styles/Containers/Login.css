@@ -7,18 +7,68 @@
 	background-color: #27292d;
 }
 
+.login .container {
+	position: relative;
+	border: 1px solid red;
+	padding: 80px 20px 60px;
+	border-radius: 25px;
+	background-color: #171820;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6),
+		0 -2px 5px rgba(255, 255, 255, 0.6),
+		2px 0 5px rgba(255, 255, 255, 0.6),
+		-2px 0 5px rgba(255, 255, 255, 0.6);
+}
+
+.login .container .audio {
+	position: absolute;
+	width: 70px;
+	height: 6px;
+	top: 50px;
+	left: calc(50% - 35px);
+	border-radius: 5px;
+	background-color: #fbfdff;
+}
+
+.login .container .camera {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 35px;
+	left: calc(100% - 40px);
+	border-radius: 50%;
+	background-color: #fbfdff;
+}
+
+.login .container .bottom {
+	position: absolute;
+	border: 1px solid #fbfdff;
+	width: 70px;
+	height: 25px;
+	bottom: 15px;
+	left: calc(50% - 35px);
+	border-radius: 10px;
+}
+
 .login__form {
 	height: 100%;
-	width: 300px;
-	padding: 150px 0;
+	width: 280px;
+	padding: 90px 20px;
 	display: flex;
 	flex-direction: column;
+	border-radius: 2px;
+	background-color: #fbfdff;
+	box-shadow: 0 1px 3px rgba(255, 255, 255, 0.6),
+		0 -1px 3px rgba(255, 255, 255, 0.6),
+		1px 0 3px rgba(255, 255, 255, 0.6),
+		-1px 0 3px rgba(255, 255, 255, 0.6);
 }
 
 .login__form .login__form-title {
 	text-align: center;
 	font-size: 25px;
-	margin: 0 0 30px;
+	margin: 0 0 50px;
+	color: rgba(0, 0, 0, 0.8);
 }
 
 .login__form .login__form-text {
@@ -28,7 +78,7 @@
 	border-radius: 1px;
 	outline: none;
 	border: 1px solid rgba(0, 0, 0, 0.5);
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0.8);
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -39,9 +89,10 @@
 	outline: none;
 	border: 1px solid rgba(0, 0, 0, 0.5);
 	color: #e7e0e9;
-	background-color: #d389fe;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 	cursor: pointer;
-	font-size: 15px;
-	font-weight: 500;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	box-shadow: 0 1px 2px rgba(27, 27, 27, 0.4);
+	color: rgba(0, 0, 0, 0.8);
 }

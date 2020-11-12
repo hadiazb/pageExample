@@ -43,6 +43,13 @@ const ROUTES = [
 		auth: true, // Private Route
 	},
 	{
+		path: '/profile',
+		key: 'PROFILE',
+		exact: true,
+		component: Result,
+		auth: true, // Private Route
+	},
+	{
 		path: '/logout',
 		key: 'LOGOUT',
 		exact: true,

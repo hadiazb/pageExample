@@ -22,24 +22,29 @@ const Login = (props) => {
 
 	return (
 		<section className='login'>
-			<form className='login__form' onSubmit={handleLogin}>
-				<h5 className='login__form-title'>Login</h5>
-				<input
-					className='login__form-text'
-					type='email'
-					placeholder='Email...'
-				/>
-				<input
-					className='login__form-text'
-					type='password'
-					placeholder='Password...'
-				/>
-				<input
-					className='login__form-bottom'
-					type='submit'
-					value='Send'
-				/>
-			</form>
+			<div className='container'>
+				<div className='audio'></div>
+				<div className='camera'></div>
+				<div className='bottom'></div>
+				<form className='login__form' onSubmit={handleLogin}>
+					<h5 className='login__form-title'>Login</h5>
+					<input
+						className='login__form-text'
+						type='email'
+						placeholder='Email...'
+					/>
+					<input
+						className='login__form-text'
+						type='password'
+						placeholder='Password...'
+					/>
+					<input
+						className='login__form-bottom'
+						type='submit'
+						value='Send'
+					/>
+				</form>
+			</div>
 		</section>
 	);
 };

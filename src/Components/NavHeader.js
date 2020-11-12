@@ -25,6 +25,11 @@ const NavHeader = (props) => {
 							</NavLink>
 						</li>
 						<li className='list__item'>
+							<NavLink to='/profile' activeClassName='select'>
+								<h4 className='list__item-text'>Profile</h4>
+							</NavLink>
+						</li>
+						<li className='list__item'>
 							<NavLink to='/logout' activeClassName='select'>
 								<h4 className='list__item-text'>Logout</h4>
 							</NavLink>

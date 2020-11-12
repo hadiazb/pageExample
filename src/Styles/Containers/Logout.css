@@ -47,10 +47,8 @@
 	width: 70px;
 	height: 25px;
 	bottom: 10px;
-	/* top: 25px; */
 	left: calc(50% - 35px);
 	border-radius: 10px;
-	/* background-color: #fbfdff; */
 }
 
 .logout .logout__container .mark {
