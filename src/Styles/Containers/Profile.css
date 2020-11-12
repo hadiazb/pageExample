@@ -72,6 +72,7 @@ input[type='date'] {
 }
 
 .profile .profile__card {
+	position: relative;
 	width: calc(100% - 320px);
 	margin: 0 0 0 20px;
 	border-radius: 5px;
@@ -82,7 +83,105 @@ input[type='date'] {
 }
 
 .profile .profile__card .profile__card-header {
-  height: 200px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+	position: relative;
+	height: 200px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profile .profile__card .profile__card-header .photo {
+	position: absolute;
+	width: 170px;
+	top: 110px;
+	left: calc(50% - 85px);
+	border-radius: 50%;
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2),
+		0 2px 4px rgba(0, 0, 0, 0.2), 2px 0 4px rgba(0, 0, 0, 0.2),
+		-2px 0 4px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.profile .profile__card .profile__card-header-input {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	z-index: 10;
+	top: 150px;
+	right: 10px;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.profile .profile__card .profile__card-header-input .file {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  overflow: hidden;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.profile
+	.profile__card
+	.profile__card-header-input
+	.file
+	.file__input {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.profile .profile__card .profile__card-header-photo {
+	position: absolute;
+	width: 170px;
+	height: 170px;
+	z-index: 10;
+	top: 110px;
+	left: calc(50% - 85px);
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.profile .profile__card .profile__card-header-photo .file {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	color: rgba(255, 255, 255, 0.5);
+	opacity: 0;
+}
+
+.profile
+	.profile__card
+	.profile__card-header-photo
+	.file:hover {
+	opacity: 1;
+}
+
+.profile
+	.profile__card
+	.profile__card-header-photo
+	.file
+	.file__input {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+	opacity: 0;
 }
