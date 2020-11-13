@@ -44,6 +44,18 @@ const Profile = (props) => {
 						<MdPhotoCamera size='50' />
 					</div>
 				</div>
+				<div className='profile__card-header-info'>
+					<h4 className='title'>User Information</h4>
+					<h5 className='props'>
+						Username: <span>hadiazb</span>
+					</h5>
+					<h5 className='props'>
+						Name: <span>Hugo Andres Diaz Bernal</span>{' '}
+					</h5>
+					<h5 className='props'>
+						Email: <span>hugoandresdiazbernal@gmail.com</span>
+					</h5>
+				</div>
 			</div>
 		</div>
 	);

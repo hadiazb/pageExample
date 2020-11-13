@@ -5,7 +5,10 @@ const NavHeader = (props) => {
 	const { logged, authorized } = props;
 
 	const content = (logged, authorized) => {
-		if (logged === true && authorized === true) {
+		if (
+			(logged === true && authorized === true) ||
+			(logged === 'true' && authorized === 'true')
+		) {
 			return (
 				<nav className='header__nav'>
 					<ul className='list'>

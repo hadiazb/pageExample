@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import NavHeader from '../Components/NavHeader';
 
 const Layout = (props) => {
-	const { children, sesionReducer } = props;
+	const { children } = props;
+
 	return (
 		<>
 			<header className='header'>
@@ -17,8 +18,16 @@ const Layout = (props) => {
 					/>
 				</Link>
 				<NavHeader
-					logged={sesionReducer.logged}
-					authorized={sesionReducer.authorized}
+					logged={
+						localStorage.getItem('logged')
+							? localStorage.getItem('logged')
+							: false
+					}
+					authorized={
+						localStorage.getItem('authorized')
+							? localStorage.getItem('authorized')
+							: false
+					}
 				/>
 			</header>
 			{children}

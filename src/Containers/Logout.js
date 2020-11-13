@@ -12,6 +12,7 @@ const Logout = (props) => {
 	const handleLogout = (event) => {
 		event.preventDefault();
 		leaveSesion();
+		localStorage.clear();
 	};
 
 	return (

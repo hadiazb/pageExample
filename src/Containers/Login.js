@@ -11,10 +11,15 @@ const Login = (props) => {
 	const handleLogin = (event) => {
 		event.preventDefault();
 		getSesion();
+		localStorage.setItem('logged', !sesionReducer.logged);
+		localStorage.setItem(
+			'authorized',
+			!sesionReducer.authorized
+		);
 	};
 
-	const logged = sesionReducer.logged;
-	const authorized = sesionReducer.authorized;
+	const logged = localStorage.getItem('logged');
+	const authorized = localStorage.getItem('authorized');
 
 	if (logged && authorized) {
 		return <Redirect to='/' />;

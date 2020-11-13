@@ -3,17 +3,19 @@ import { Redirect, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const AuthenticatedRoute = (props) => {
-	const {
-		component: Component,
-		path,
-		exact,
-		sesionReducer,
-	} = props;
+	const { component: Component, path, exact } = props;
 
-	const logged = sesionReducer.logged;
-	const authorized = sesionReducer.authorized;
+	const logged = localStorage.getItem('logged')
+		? localStorage.getItem('logged')
+		: false;
+	const authorized = localStorage.getItem('authorized')
+		? localStorage.getItem('authorized')
+		: false;
 
-	if (logged && authorized) {
+	if (
+		(logged === true && authorized === true) ||
+		(logged === 'true' && authorized === 'true')
+	) {
 		return (
 			<Route component={Component} path={path} exact={exact} />
 		);

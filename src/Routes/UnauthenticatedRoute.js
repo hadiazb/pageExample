@@ -6,12 +6,15 @@ const UnauthenticatedRoute = (props) => {
 	const {
 		component: Component,
 		path,
-		exact,
-		sesionReducer,
+		exact
 	} = props;
 
-	const logged = sesionReducer.logged;
-	const authorized = sesionReducer.authorized;
+	const logged = localStorage.getItem('logged')
+		? localStorage.getItem('logged')
+		: false;
+	const authorized = localStorage.getItem('authorized')
+		? localStorage.getItem('authorized')
+		: false;
 
 	if (logged && authorized) {
 		return (
