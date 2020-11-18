@@ -17,7 +17,7 @@ export const getCityByName = (city) => async (dispatch) => {
 	});
 	try {
 		const respuesta = await axios.get(
-			`${uri.host}?q=${uri.city}&appid=${uri.key}`
+			`${uri.host}?q=${uri.city}&appid=${uri.key}&lang=sp&units=metric`
 		);
 		dispatch({
 			type: GET_CITY,

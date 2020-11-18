@@ -5,10 +5,10 @@ import * as callCurrentByCityNameIdActions from '../actions/callCurrentByCityNam
 import { FiSearch } from 'react-icons/fi';
 import Swal from 'sweetalert2';
 import { MeteorRainLoading } from 'react-loadingg';
+import { format } from 'date-fns';
 
 const ByCityNameId = (props) => {
 	const {
-		callCurrentByCityNameIdReducer,
 		getCityByName,
 		callCurrentByCityNameIdReducer: { loading },
 		callCurrentByCityNameIdReducer: { city },
@@ -17,8 +17,6 @@ const ByCityNameId = (props) => {
 	const [cityName, setCityName] = useState({
 		name: '',
 	});
-
-	console.log(callCurrentByCityNameIdReducer);
 
 	const handleClick = async () => {
 		if (cityName.name === '') {
@@ -34,6 +32,14 @@ const ByCityNameId = (props) => {
 		}
 		if (cityName.name !== '') {
 			await getCityByName(cityName.name);
+			clear();
+		}
+	};
+
+	const handleEnter = async (event) => {
+		const keycode = event.which;
+		if (keycode === 13) {
+			handleClick();
 		}
 	};
 
@@ -42,6 +48,10 @@ const ByCityNameId = (props) => {
 			...cityName,
 			name: e.target.value,
 		});
+	};
+
+	const clear = () => {
+		document.getElementById('search').value = '';
 	};
 
 	const putContent = () => {
@@ -80,6 +90,10 @@ const ByCityNameId = (props) => {
 		return (
 			<div>
 				<h6>{city.name}</h6>
+				<h6>{city.base}</h6>
+				<h6>{city.timezone}</h6>
+				<h6>{city.visibility}</h6>
+				<h6>{format(new Date() - city.dt, 'PPPP')}</h6>
 			</div>
 		);
 	};
@@ -97,6 +111,8 @@ const ByCityNameId = (props) => {
 							type='text'
 							placeholder='Entry city...'
 							onChange={handleInputChange}
+							onKeyPress={handleEnter}
+							id='search'
 						/>
 						<span onClick={handleClick}>
 							<FiSearch size='20' />
