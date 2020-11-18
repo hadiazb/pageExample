@@ -17,8 +17,9 @@ const Data = [
 			{ two: <BsStarFill /> },
 			{ three: <BsStarFill /> },
 			{ four: <BsStarFill /> },
-			{ five: <BsStarHalf />  },
+			{ five: <BsStarHalf /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 2,
@@ -28,10 +29,11 @@ const Data = [
 		icon: [
 			{ one: <BsStarFill /> },
 			{ two: <BsStarFill /> },
-			{ three: <BsStarHalf />  },
-			{ four: <BsStar/> },
-			{ five: <BsStar/> },
+			{ three: <BsStarHalf /> },
+			{ four: <BsStar /> },
+			{ five: <BsStar /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 3,
@@ -42,10 +44,11 @@ const Data = [
 		icon: [
 			{ one: <BsStarFill /> },
 			{ two: <BsStarFill /> },
-			{ three: <BsStarHalf />  },
-			{ four: <BsStar/> },
-			{ five: <BsStar/> },
+			{ three: <BsStarHalf /> },
+			{ four: <BsStar /> },
+			{ five: <BsStar /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 4,
@@ -56,10 +59,11 @@ const Data = [
 		icon: [
 			{ one: <BsStarFill /> },
 			{ two: <BsStarFill /> },
-			{ three: <BsStarHalf />  },
-			{ four: <BsStar/> },
-			{ five: <BsStar/> },
+			{ three: <BsStarHalf /> },
+			{ four: <BsStar /> },
+			{ five: <BsStar /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 5,
@@ -73,8 +77,9 @@ const Data = [
 			{ two: <BsStarFill /> },
 			{ three: <BsStarFill /> },
 			{ four: <BsStarFill /> },
-			{ five: <BsStarHalf />  },
+			{ five: <BsStarHalf /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 6,
@@ -85,10 +90,11 @@ const Data = [
 		icon: [
 			{ one: <BsStarFill /> },
 			{ two: <BsStarFill /> },
-			{ three: <BsStarHalf />  },
-			{ four: <BsStar/> },
-			{ five: <BsStar/> },
+			{ three: <BsStarHalf /> },
+			{ four: <BsStar /> },
+			{ five: <BsStar /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 7,
@@ -102,8 +108,9 @@ const Data = [
 			{ two: <BsStarFill /> },
 			{ three: <BsStarFill /> },
 			{ four: <BsStarFill /> },
-			{ five: <BsStarHalf />  },
+			{ five: <BsStarHalf /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 8,
@@ -114,10 +121,11 @@ const Data = [
 		icon: [
 			{ one: <BsStarFill /> },
 			{ two: <BsStarFill /> },
-			{ three: <BsStarHalf />  },
-			{ four: <BsStar/> },
-			{ five: <BsStar/> },
+			{ three: <BsStarHalf /> },
+			{ four: <BsStar /> },
+			{ five: <BsStar /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 9,
@@ -128,10 +136,11 @@ const Data = [
 		icon: [
 			{ one: <BsStarFill /> },
 			{ two: <BsStarFill /> },
-			{ three: <BsStarHalf />  },
-			{ four: <BsStar/> },
-			{ five: <BsStar/> },
+			{ three: <BsStarHalf /> },
+			{ four: <BsStar /> },
+			{ five: <BsStar /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 10,
@@ -142,11 +151,12 @@ const Data = [
 		label: 'Daily Forecast 16 days',
 		icon: [
 			{ one: <BsStarFill /> },
-			{ two: <BsStarHalf />  },
-			{ three: <BsStar/> },
-			{ four: <BsStar/> },
-			{ five: <BsStar/> },
+			{ two: <BsStarHalf /> },
+			{ three: <BsStar /> },
+			{ four: <BsStar /> },
+			{ five: <BsStar /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 11,
@@ -158,10 +168,11 @@ const Data = [
 		icon: [
 			{ one: <BsStarFill /> },
 			{ two: <BsStarFill /> },
-			{ three: <BsStarHalf />  },
-			{ four: <BsStar/> },
-			{ five: <BsStar/> },
+			{ three: <BsStarHalf /> },
+			{ four: <BsStar /> },
+			{ five: <BsStar /> },
 		],
+		path: 'by-city-id-name',
 	},
 	{
 		id: 12,
@@ -172,10 +183,11 @@ const Data = [
 		icon: [
 			{ one: <BsStarFill /> },
 			{ two: <BsStarHalf /> },
-			{ three: <BsStar/> },
-			{ four: <BsStar/> },
-			{ five: <BsStar/> },
+			{ three: <BsStar /> },
+			{ four: <BsStar /> },
+			{ five: <BsStar /> },
 		],
+		path: 'by-city-id-name',
 	},
 ];
 

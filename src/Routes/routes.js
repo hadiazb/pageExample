@@ -5,7 +5,7 @@ import Result from '../Containers/Result';
 import Report from '../Containers/Report';
 import Profile from '../Containers/Profile';
 import Logout from '../Containers/Logout';
-import NoAuth from '../Containers/NoAuth';
+import ByCityIdName from '../Containers/ByCityIdName';
 
 const ROUTES = [
 	{
@@ -13,7 +13,7 @@ const ROUTES = [
 		key: 'REGISTER',
 		exact: true,
 		component: Register,
-		auth: false,  // Public Route
+		auth: false, // Public Route
 	},
 	{
 		path: '/login',
@@ -58,11 +58,11 @@ const ROUTES = [
 		auth: true, // Private Route
 	},
 	{
-		path: '/no-auth',
-		key: 'NOAUTH',
+		path: '/by-city-id-name',
+		key: 'BYCITYIDNAME',
 		exact: true,
-		component: NoAuth,
-		auth: false, // Public Route
+		component: ByCityIdName,
+		auth: true, // Public Route
 	},
 ];
 
