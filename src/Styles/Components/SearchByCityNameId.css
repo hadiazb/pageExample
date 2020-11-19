@@ -6,7 +6,7 @@
 
 .city .city__info {
 	height: 440px;
-	width: 40%;
+	width: 35%;
 	margin: 0 10px 0 0;
 	position: relative;
 	padding: 20px;
@@ -22,9 +22,14 @@
 }
 
 .city .city__map {
-	border: 1px solid yellow;
 	height: 440px;
-	width: calc(100% - 40% - 20px);
+	width: calc(100% - 35% - 20px);
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2),
+		0 2px 4px rgba(0, 0, 0, 0.2), 2px 0 4px rgba(0, 0, 0, 0.2),
+		-2px 0 4px rgba(0, 0, 0, 0.2);
+	background-color: #2b2f31;
+	border-radius: 3px;
+	overflow: hidden;
 }
 
 .city__info-title {

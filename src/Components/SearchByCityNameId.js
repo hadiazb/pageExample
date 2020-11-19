@@ -9,6 +9,8 @@ import {
 	AiOutlinePlusCircle,
 	AiOutlineMinusCircle,
 } from 'react-icons/ai';
+import Map from './Map';
+import { MeteorRainLoading } from 'react-loadingg';
 
 const SearchByCityNameId = ({ city }) => {
 	return (
@@ -87,7 +89,26 @@ const SearchByCityNameId = ({ city }) => {
 					</li>
 				</ul>
 			</div>
-			<div className='city__map'></div>
+			<div className='city__map'>
+				<Map
+					containerElement={
+						<div style={{ height: '100%' }}></div>
+					}
+					zoom={10}
+					lat={city.coord.lat}
+					lng={city.coord.lon}
+					mapElement={<div style={{ height: '100%' }}></div>}
+					loadingElement={
+						<MeteorRainLoading
+							size='large'
+							color='#fbfdff'
+							speed={0.5}
+						/>
+					}
+					city={city}
+					googleMapURL='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDmbtqh28Uxv1zM38FINetvopdOEHlLIXA'
+				/>
+			</div>
 		</div>
 	);
 };
