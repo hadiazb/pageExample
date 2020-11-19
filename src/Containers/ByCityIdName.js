@@ -5,7 +5,7 @@ import * as callCurrentByCityNameIdActions from '../actions/callCurrentByCityNam
 import { FiSearch } from 'react-icons/fi';
 import Swal from 'sweetalert2';
 import { MeteorRainLoading } from 'react-loadingg';
-import { format } from 'date-fns';
+import SearchByCityNameId from '../Components/SearchByCityNameId';
 
 const ByCityNameId = (props) => {
 	const {
@@ -16,6 +16,7 @@ const ByCityNameId = (props) => {
 	} = props;
 	const [cityName, setCityName] = useState({
 		name: '',
+		img: '',
 	});
 
 	const handleClick = async () => {
@@ -87,15 +88,7 @@ const ByCityNameId = (props) => {
 			);
 		}
 
-		return (
-			<div>
-				<h6>{city.name}</h6>
-				<h6>{city.base}</h6>
-				<h6>{city.timezone}</h6>
-				<h6>{city.visibility}</h6>
-				<h6>{format(new Date() - city.dt, 'PPPP')}</h6>
-			</div>
-		);
+		return <SearchByCityNameId city={city} />;
 	};
 
 	return (

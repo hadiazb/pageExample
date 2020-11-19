@@ -1,6 +1,5 @@
 .byCityName {
-	height: calc(100vh - 90px);
-	padding: 0 30px;
+	padding: 0 30px 14px;
 	background-color: #27292d;
 }
 
@@ -34,7 +33,7 @@
 	border-radius: 50px;
 	overflow: hidden;
 	outline: none;
-	padding-right: 10px;
+	padding-right: 0px;
 }
 
 .byCityName__header-form .button .input {
