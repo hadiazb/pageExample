@@ -20,7 +20,6 @@
 		-2px 0 5px rgba(255, 255, 255, 0.6);
 }
 
-
 .register .container .audio {
 	position: absolute;
 	width: 70px;
@@ -74,6 +73,7 @@
 }
 
 .register__form .register__form-text {
+	width: 100%;
 	margin: 0 0 20px;
 	height: 35px;
 	padding-left: 20px;
@@ -90,8 +90,8 @@
 	border-radius: 1px;
 	outline: none;
 	border: 1px solid rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  font-size: 15px;
+	cursor: pointer;
+	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: 2px;
 	box-shadow: 0 1px 2px rgba(27, 27, 27, 0.4);

@@ -16,7 +16,6 @@ const Map = ({ zoom, lat, lng, city }) => {
 		zoomControl: true,
 	};
 
-	console.log(flag);
 
 	return (
 		<GoogleMap
